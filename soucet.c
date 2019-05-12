@@ -7,7 +7,7 @@ int main (int argc, char *argv[])
 	int b;
 
 	a = atoi (argv[1]);
-	b = atoi (argv[2]);
+	b = atoi (argv[3]);
 
 	printf ("%i\n", (a + b));
 
