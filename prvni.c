@@ -8,7 +8,6 @@ int calculateTriangularNumber (int n)
 	triangularNumber += i;
 	return triangularNumber;
 }
-
 int main (void)
 {
 	printf ("Triangular number %i is %i\n", 10, calculateTriangularNumber (10));
@@ -18,29 +17,75 @@ int main (void)
 }
 */
 
+
+/*
 int compute (char src[], char result[], int n)
 {
-	int intValue1, intValue2, result = 0;
-
-	int size_of_src = sizeof(src);
-	for (int i = 0;  i < (size_of_src - 1); i++)
+	int intValue, result1 = 0, result2 = 0, flag_to_r2 = 0;
+	
+	for (int i = 0; i < 3; i++)
 	{
+		if (src[i] = ' ')
+			flag_to_r2 = 1;
 
+		if (src[i] >= '0' && src[i] <= '9')
+		{
+			intValue = src[i] - '0';
+			if (!flag_to_r2)
+				result1 = result1 * 10 + intValue;
+			else
+				result2 = result2 * 10 + intValue;
+		}
 
+		printf ("%i\n", result1);
+		printf ("%i\n", result2);
+	}
+
+	return 1;
+}
+*/
+
+int strToInt (const char string[])
+{
+	int i, intValue, result = 0;
+
+	for ( i = 0; string[i] >= '0' && string[i] <= '9'; ++i )
+	{
+		intValue = string[i] - '0';
+		result = result * 10 + intValue;
+	}
+
+	return result;
+}
 
 int main (void)
 {
+
+
+
+	/*
+
+	int strToInt (const char string[]);
+
+	printf ("%i\n", strToInt("245"));
+	printf ("%i\n", strToInt("100") + 25);
+	printf ("%i\n", strToInt("13x5"));
+
+	return 0;
+
+
+
+	
 	char r[5];
 	int v;
 	v = compute("10 20", r, 5);
+	
 	if (v)
-		printf(%s\n", r);
+		printf("%s\n", r);
 	else
-		print("vysledek je moc velky\n");
-
+		printf("vysledek je moc velky\n");
+		
 	return 0;
+	*/
 }
-
-
-
 
